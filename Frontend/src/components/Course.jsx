@@ -12,7 +12,7 @@ function Course() {
     const getBook = async () => {
       try {
         setLoading(true);
-        const res = await axios.get("http://localhost:4001/book");
+        const res = await axios.get("https://bookart-production.up.railway.app/book");
         setBook(res.data);
       } catch (error) {
         setError("Failed to fetch books. Please try again later.");
